@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.post("/healthy")
 async def health_check():
-    return {"status": "healthy"}
+    return {"status": "healthy_sequential_graphs"}
 
 
 @app.post("/GenerateBlogPost")

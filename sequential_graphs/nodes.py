@@ -1,12 +1,14 @@
-from langchain_openai import ChatOpenAI
-from dotenv import load_dotenv
 from state import State
 import json
-
+from langchain_openai import ChatOpenAI
+from dotenv import load_dotenv
 
 load_dotenv()  # Load environment variables from .env file
 
+
 model = ChatOpenAI(temperature=0, model_name="gpt-4o-mini")
+
+
 
 def outline_gen(state: State) -> State:
     query = state["user_prompt"]
